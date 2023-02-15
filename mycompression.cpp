@@ -152,28 +152,8 @@ int main() {
         encoding(in_file_path, encoded_file_path);
         decoding(encoded_file_path, decoded_file_path);
 
-        // double original_file_size = 0;
-        // double compressed_file_size = 0;
-
-        // fstream original_file(in_file_path);
-        // fstream compressed_file(encoded_file_path);
-
-        // original_file.seekg (0, ios::end);
-        // original_file_size = original_file.tellg();
-
-        // compressed_file.seekg (0, ios::end);
-        // compressed_file_size = compressed_file.tellg();
-
-        // double compression_ratio = original_file_size / compressed_file_size;
-
-        // original_file.close();
-        // compressed_file.close();
-
         if (is_equal_files(in_file_path, decoded_file_path)) {
             cout << "test" << current_test << " - success" << "\n";
-            // cout << "original file size: " << original_file_size << "byte" << "\n";
-            // cout << "compressed file size: " << compressed_file_size << "byte" << "\n";
-            // cout << "compression ratio - " << compression_ratio << "\n";
             successfull_tests++;
         }
         else {
